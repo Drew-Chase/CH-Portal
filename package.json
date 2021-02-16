@@ -1,0 +1,29 @@
+{
+  "name": "ch-portal",
+  "version": "0.0.3",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build -w"
+  },
+  "keywords": [],
+  "author": "Drew Chase",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
+  },
+  "build": {
+    "appId": "com.drewchaseproject.electron.chaselabs",
+    "directories": {
+      "output": "build"
+    },
+    "productName": "CH - Portal",
+    "target": "portable",
+    "icon": "src/img/icon.ico"
+  }
+}
