@@ -1,0 +1,33 @@
+{
+  "name": "ch_portal",
+  "version": "0.1.0",
+  "description": "A Launcher and Updater for the Beta version of the Portal to all Chase Labs internal connections",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build -w"
+  },
+  "keywords": [],
+  "author": "Drew Chase",
+  "license": "ISC",
+  "devDependencies": {
+    "adm-zip": "^0.4.16",
+    "electron": "^10.2.0",
+    "null-loader": "^4.0.1",
+    "request": "^2.88.2"
+  },
+  "dependencies": {
+    "adm-zip": "latest",
+    "request": "latest",
+    "uaup-js": "latest"
+  },
+  "build": {
+    "appId": "com.drewchaseproject.electron.CHPortal",
+    "directories": {
+      "output": "build"
+    },
+    "productName": "CH - Portal",
+    "target":"portable",
+    "icon":"src/img/icon.ico"
+  }
+}

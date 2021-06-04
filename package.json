@@ -1,6 +1,6 @@
 {
   "name": "ch-portal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "author": "Drew Chase",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^10.2.0"
+    "electron": "^10.2.0",
+    "electron-builder": "^22.10.5"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",

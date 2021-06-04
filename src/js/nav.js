@@ -5,7 +5,7 @@ var currentIP = "";
 let baseDomain = isLocal ? "http://192.168.1.19" : "http://play.drewchaseproject.com";
 const view = document.getElementById('main');
 fetch('https://api.ipify.org/?format=json').then(response => response.json()).then(data => currentIP = data.ip).then(() => {
-    isLocal = currentIP.includes('67.255.231.244');
+    isLocal = currentIP.includes('67.255.238.53');
 }).then(() => {
     baseDomain = isLocal ? "http://192.168.1.19" : "http://play.drewchaseproject.com"
     loadNavigationMachanics();
@@ -44,7 +44,7 @@ function LoadView(url = 'noblit', called = null) {
             page = `${baseDomain}:32400`;
             break;
         case 'mc':
-            page = `${isLocal ? "http://192.168.1.15" : baseDomain}:8443`;
+            page = `${isLocal ? "http://192.168.1.149" : baseDomain}:8443`;
             break;
         case 'settings':
             page = "pages/settings.html";
