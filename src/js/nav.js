@@ -25,6 +25,11 @@ function setNavigationToggle(collapsed = false) {
 }
 
 function LoadView(url = 'noblit', called = null) {
+    fetch('https://api.ipify.org/?format=json').then(response => response.json()).then(data => currentIP = data.ip).then(() => {
+        isLocal = currentIP.includes('67.255.238.53');
+    }).then(() => {
+        baseDomain = isLocal ? "http://192.168.1.19" : "http://play.drewchaseproject.com"
+    });
     url = url.toLowerCase();
     let page = "pages/home.html";
     switch (url) {
@@ -40,8 +45,14 @@ function LoadView(url = 'noblit', called = null) {
         case 'sonarr':
             page = `${baseDomain}:8989`;
             break;
-        case 'plex':
-            page = `${baseDomain}:32400`;
+        case 'deluge':
+            page = `${baseDomain}:8112`;
+            break;
+        case 'lidarr':
+            page = `${baseDomain}:8686`;
+            break;
+        case 'synclounge':
+            page = `http://app.synclounge.tv/#/join/rfK7l/https:%2F%2F1.us.synclounge.tv%5C`;
             break;
         case 'mc':
             page = `${isLocal ? "http://192.168.1.149" : baseDomain}:8443`;

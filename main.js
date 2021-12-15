@@ -43,7 +43,7 @@ function createTray() {
     ))
 }
 
-app.whenReady().then(createWindow).then(createTray).then(() => win.hide());
+app.whenReady().then(createWindow).then(createTray);//.then(() => win.hide());
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
